@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Studio Week 4</title>
+  <!-- Adding in the Leaflet CSS file -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <!-- Adding Leaflet JavaScript file -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <!-- Adding styling info for the map -->
+  <style type="text/css">
+    /* Add a CSS rule that selects an element with the ID "mapId" and gives it a height of 600 pixels */
+    #mapId {
+     height: 600px;
+   }
+  </style>
+  <!-- Adding styling info for page layout by reading in a CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Studio Week 4<br> A Leaflet map! </h1>
+  <!-- Add multiple pages to web page-->
+  <!-- active class displays the grey box around current page-->
+  <ul>
+  	<li><a class="active" href="index.html" target="_self">Output 1</a></li>
+    <li><a href="Mapbox-gl-js-cwm.html" target="_self">Output 2</a></li>
+    <li><a href="Mapbox-gl-js-ct.html" target="_self">Output 3</a></li>
+    <li><a href="Mapbox-gl-js-bm.html" target="_self">Output 4</a></li>
+  </ul>
+  <br>
+
+  <!-- Add a div with id="mapId" to give the map somewhere to go -->
+  <div id="mapId"></div>
+
+  <script>
+  // initialize the map
+   var map = L.map('map').setView([42.35, -71.08], 13);
+
+   // load a tile layer
+   L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+     {
+       attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+       maxZoom: 17,
+       minZoom: 9
+     }).addTo(map);
+
+  </script>
+</body>
+
+</html>

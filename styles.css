@@ -1,0 +1,53 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  font: inherit;
+  font-size: 40px;
+  color: #577489;
+}
+
+h2{
+  font: inherit;
+  font-size: 22px;
+  color: #666666;
+}
+
+ul {
+ list-style-type: none;
+ margin: 1px;
+ padding: 1px;
+ overflow: hidden;
+ background-color: #F1F2EB;
+}
+
+li {
+ float: left;
+ border-right: 2px solid white;
+}
+
+/* Add a border to all( but not the last) list items */
+li:last-child {
+ border-right: none;
+}
+
+li a {
+ display: block;
+ color: #907A61;
+ font: inherit;
+ text-align: left;
+ padding: 15px 17px;
+ text-decoration: none;
+}
+
+/* Links will change color when hovered over */
+li a:hover {
+ background-color: white;
+ color: #907A61;
+}
+
+.active {
+ background-color: #B6B93F;
+ color: white;
+}
