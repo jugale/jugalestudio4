@@ -18,8 +18,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<h1>Studio Week 4 <br> A Leaflet map!</h1>
+<h1>Studio Week 4 <br> Public Beaches of Chatham</h1><h2> Below is a map of public beaches in Chatham, Massachusetts. Click on each beach to see the fees, lifeguard hours, and other beach information.</h2>
 <!-- Add multiple pages to web page-->
 <!-- active class displays the grey box around current page-->
 <ul>
@@ -55,7 +54,7 @@
     var beaches =  L.geoJson(data  ,{
         pointToLayer: function(feature,latlng){
           var marker = L.marker(latlng,{icon: beachIcon});
-        marker.bindPopup(`<h2>`+ feature.properties.Name +`</h2>` + `<h4>`+ `<b>` + `Address: ` + `</b>`+ feature.properties.Address + `</h4>` +`<h4>`+ `<b>` + `Fees: ` + `</b>`+  feature.properties.Fees+ `</h4>`+`<h4>`+ `<b>` + `Lifeguards: ` + `</b>`+ `</h4>`+ feature.properties.Lifeguards+ `<h4>`+ `<b>` + `Facilities: ` + `</b>`+ `</h4>`+ feature.properties.Facilities + `<h4>`+ `<b>` + `Accessibility: ` + `</b>`+ `</h4>`+ feature.properties.Accessability);
+        marker.bindPopup(`<h2>`+ feature.properties.Name +`</h2>` + `<h4>`+ `<b>` + `Address: ` + `</b>`+ feature.properties.Address + `</h4>` +`<h4>`+ `<b>` + `Fees: ` + `</b>`+  feature.properties.Fees+ `</h4>`+`<h4>`+ `<b>` + `Lifeguards: ` + `</b>`+ feature.properties.Lifeguards+ `<h4>`+ `<b>` + `Facilities: ` + `</b>`+ feature.properties.Facilities + `<h4>`+ `<b>` + `Accessibility: ` + `</b>`+ feature.properties.Accessability)+ `</h4>`;
         return marker;
         }
       }).addTo(map);
